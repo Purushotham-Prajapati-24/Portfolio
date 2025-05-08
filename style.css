@@ -413,7 +413,7 @@ body {
     border-radius: 20px;
     z-index: -1;
     padding: 3px;
-    animation:  3s spin linear infinite;
+    animation: 3s spin linear infinite;
 }
 .card::before{
     filter: blur(1.5rem);

@@ -25,7 +25,7 @@ html{
 }
 
 body {
-    background-image: url("https://dl.dropboxusercontent.com/scl/fi/jid73g8lrcqdf7k9t2ybj/hero-bg.webp?rlkey=8q6qawnfzet627nnuupq5kkzz&st=n43md5xe&");
+    background-image: url("/images/hero-bg.webp");
     background-size:cover;
     background-attachment: fixed;
     overflow-x: hidden;

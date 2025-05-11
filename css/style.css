@@ -10,7 +10,7 @@ html{
 
 @font-face {
     font-family: Vishalji;
-    src: url(fonts/Mona-Sans.ttf);
+    src: url('../fonts/Mona-Sans.ttf');
 }
 
 @property --angle{
@@ -25,7 +25,7 @@ html{
 }
 
 body {
-    background-image: url("images/hero-bg.webp");
+    background-image: url("../images/hero-bg.webp");
     background-size:cover;
     background-attachment: fixed;
     overflow-x: hidden;

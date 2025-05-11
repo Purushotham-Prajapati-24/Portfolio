@@ -10,7 +10,7 @@ html{
 
 @font-face {
     font-family: Vishalji;
-    src: url("./fonts/Mona-Sans.ttf");
+    src: url(./fonts/Mona-Sans.ttf);
 }
 
 @property --angle{

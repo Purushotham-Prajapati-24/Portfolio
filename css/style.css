@@ -285,6 +285,7 @@ body.light-mode .info h1{
     background-color: transparent;
     border: 1px solid rgb(77, 75, 75);
     color: white;
+    cursor: pointer;
 }
 
 

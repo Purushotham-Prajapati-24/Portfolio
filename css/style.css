@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     /* box-sizing: border-box; */
+    
 }
 
 html{
@@ -37,6 +38,7 @@ body.light-mode{
     background-size:cover;
     background-attachment: fixed;
     overflow-x: hidden;
+    cursor: url('../images/mouse.png'),auto;
 }
 
 body.light-mode .hero {
@@ -72,8 +74,27 @@ body {
     background-position: center;
     background-attachment: fixed;
     overflow-x: hidden;
+    cursor:url('../images/cursor.png'),auto;
     
 }
+
+.container{
+    cursor: url('../images/cursor.png'),auto;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff9800;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+    z-index: 9999;
+    background-color: #ff9900b4;
+}
+
 
 
 
@@ -95,6 +116,10 @@ body {
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
     display: block;
+}
+
+body.light-mode .buttons .nav-link {
+    color: white;
 }
 
 .buttons .nav-link:hover {
@@ -600,13 +625,6 @@ hr{
     padding: 10px;
 }
 
-.theme label,.theme input{
-    font-size: 20px;
-    font-family: Vishalji;
-    font-weight: 400;
-    color: white;
-    margin: 0px 20px;
-}
 
 
 .projects-links button:hover,.projects-links a:hover{
@@ -649,13 +667,53 @@ hr{
     width: 100%;
   }
 
+  .theme {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
 
 .theme-toggle{
-    padding: 8px 24px;
+    padding: 4px 20px;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
+    background-color: #D7AEFB;
+    cursor: url('../images/cursor.png'),auto;
 }
+
+body.light-mode .theme-toggle{
+    cursor:url('../images/mouse.png'),auto;
+}
+
+
+.theme-toggle .dark-light{
+    height: 30px;
+    width: 30px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    background-color:white;
+    /* box-shadow: 0 0 10px black; */
+    position: relative;
+    left: 50%;
+}
+
+
+.theme h1{
+    color: white;
+    font-family: Vishalji;
+    font-weight: 100;
+    font-size: var(1rem,2vw,2rem);
+    
+}
+
+body.light-mode .theme h1{
+    color: black;
+}
+
+
+
 
 
 

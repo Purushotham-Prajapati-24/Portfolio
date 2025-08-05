@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
+    
 
 </head>
 <body>
-
     <nav class="container" id="off-nav">
         <div class="close"><button id="closemenu">close</button></div>
         <div class="buttons">
@@ -32,7 +32,7 @@
                 <p>A Full-Stack Web Developer with a passion <br>for creating dynamic and responsive web applications.</p>
                 <div class="work-sec">
                     <button id="btn" class="resume">See Resume/CV</button>
-                    <button id="btn" class="work"><a href="#Featured Projects">See My Work</a></button>
+                    <button id="btn" class="work" onclick="location.href='#Featured Projects'" ><a >See My Work</a></button>
                 </div>
                 <div class="social">
                     <a href="https://github.com/Purushotham-Prajapati-24" ><i class="fa-brands fa-github"></i></a>
@@ -145,7 +145,8 @@
             <a href=" " ><i class="fa-brands fa-twitter"></i></a>
         </div>
         <div class="theme">
-            <button id="change-theme" class="theme-toggle">Light Mode</button>
+            <h1>Dark Theme</h1>
+            <button id="change-theme" class="theme-toggle"><div class="dark-light" id="dark-light"></div></button>
         </div>
     </div>
 
@@ -155,6 +156,8 @@
         const nav = document.getElementById("off-nav");
         const overlay = document.getElementById("overlay");
         const navLinks = document.querySelectorAll('.nav-link');
+        const lightDark = document.getElementById('dark-light');
+        const themeC = document.getElementById('change-theme'); 
 
         toggleBtn.addEventListener("click", () => {
             nav.classList.add("active");
@@ -183,7 +186,10 @@
             const savedTheme = localStorage.getItem("theme");
             if (savedTheme === "light") {
                 document.body.classList.add("light-mode");
-                themeToggleBtn.textContent = "Dark Mode"; // Update button text
+                // themeToggleBtn.textContent = "Dark Mode"; // Update button text
+                themeC.style.backgroundColor = 'lightgrey';
+                lightDark.style.left='-50%';
+                lightDark.style.transition = ' all 0.3s ease';
             }
         });
 
@@ -194,12 +200,22 @@
             // Save the current theme to localStorage
             if (document.body.classList.contains("light-mode")) {
                 localStorage.setItem("theme", "light");
-                themeToggleBtn.textContent = "Dark Mode"; // Update button text
+                themeC.style.backgroundColor = 'lightgrey';
+                lightDark.style.left='-50%';
+                lightDark.style.transition = ' all 0.3s ease';
+                
+
+                // themeToggleBtn.textContent = "Dark Mode"; // Update button text
             } else {
                 localStorage.setItem("theme", "dark");
-                themeToggleBtn.textContent = "Light Mode"; // Update button text
+                themeC.style.backgroundColor = '#D7AEFB';
+                lightDark.style.left='50%';
+                lightDark.style.transition = ' all 0.3s ease';
+
+                // themeToggleBtn.textContent = "Light Mode"; // Update button text
             }
         });
+
     </script>
 </body>
 </html>

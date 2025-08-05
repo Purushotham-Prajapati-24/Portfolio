@@ -11,7 +11,7 @@ html{
 
 @font-face {
     font-family: Vishalji;
-    src: url(/fonts/Mona-Sans.ttf);
+    src: url('../fonts/Mona-Sans.ttf');
 }
 
 @property --angle{
@@ -67,7 +67,7 @@ body.light-mode .hero button:hover {
 }
 
 body {
-    background-image: url("/images/hero-bg.webp");
+    background-image: url("../images/hero-bg.webp");
     background-size:cover;
     background-position: center;
     background-attachment: fixed;

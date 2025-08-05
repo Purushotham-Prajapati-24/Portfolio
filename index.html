@@ -6,6 +6,8 @@
     <title>Purushotham Prajapati</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
+
 </head>
 <body>
 
@@ -26,7 +28,8 @@
             <div class="info">
             <h1>Hi, I'm<br> Purushotham Prajapati<br>
              Web Developer </h1>
-                <p>A Full-Stack Web Developer with a passion for creating dynamic and responsive web applications.</p>
+             
+                <p>A Full-Stack Web Developer with a passion <br>for creating dynamic and responsive web applications.</p>
                 <div class="work-sec">
                     <button id="btn" class="resume">See Resume/CV</button>
                     <button id="btn" class="work"><a href="#Featured Projects">See My Work</a></button>
@@ -142,8 +145,7 @@
             <a href=" " ><i class="fa-brands fa-twitter"></i></a>
         </div>
         <div class="theme">
-            <label for="change-theme">Dark Theme</label>
-            <input type="checkbox" id="change-theme" class="theme-toggle">
+            <button id="change-theme" class="theme-toggle">Light Mode</button>
         </div>
     </div>
 
@@ -173,6 +175,31 @@
             nav.classList.remove("active");
             overlay.classList.remove("active");
         }
+
+        const themeToggleBtn = document.getElementById("change-theme");
+
+        // Check for saved theme preference on page load
+        window.addEventListener("DOMContentLoaded", () => {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                document.body.classList.add("light-mode");
+                themeToggleBtn.textContent = "Dark Mode"; // Update button text
+            }
+        });
+
+        // Add event listener to toggle theme
+        themeToggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            // Save the current theme to localStorage
+            if (document.body.classList.contains("light-mode")) {
+                localStorage.setItem("theme", "light");
+                themeToggleBtn.textContent = "Dark Mode"; // Update button text
+            } else {
+                localStorage.setItem("theme", "dark");
+                themeToggleBtn.textContent = "Light Mode"; // Update button text
+            }
+        });
     </script>
 </body>
 </html>

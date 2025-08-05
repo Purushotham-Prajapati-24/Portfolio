@@ -1,0 +1,163 @@
+/* Large tablets and below */
+@media (max-width: 1024px) {
+  .buttons .nav-link {
+    font-size: 40px;
+    margin: 10px 20px;
+  }
+  .info h1 {
+    font-size: 38px;
+  }
+  .projects h1,
+  .my-skills h2,
+  .contact h1 {
+    font-size: 38px;
+    padding: 60px 0 30px 0;
+  }
+  .projects h2 {
+    font-size: 22px;
+    padding: 15px 30px;
+  }
+  .projects p {
+    font-size: 16px;
+    padding: 0 30px;
+  }
+}
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .buttons {
+    margin: 10vh 5vh;
+  }
+  .buttons .nav-link {
+    font-size: 28px;
+    margin: 8px 10px;
+  }
+  .info {
+    margin: 0 0 0 20px;
+  }
+  .info h1 {
+    font-size: 28px;
+  }
+  .info p {
+    font-size: 18px;
+  }
+  .work-sec button {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+  .project {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    /* height: 200vh; */
+  }
+  .projects img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+  .my-skills img {
+    height: 80px;
+    margin: 20px 20px;
+  }
+  .img-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .contact-info {
+    flex-direction: column;
+    margin: 0 10px;
+  }
+  .available,
+  .form {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    gap: 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .hero {
+    height: 100vh;
+    margin-bottom: 0;
+    padding-bottom: 40px;
+  }
+  .container1 {
+    padding: 8vh 0;
+  }
+  .info {
+    margin: 0 10px;
+  }
+  .info h1 {
+    font-size: 22px;
+  }
+  .info p {
+    font-size: 14px;
+  }
+  .work-sec button {
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+  }
+  .social i {
+    font-size: 16px;
+    padding: 7px;
+    margin: 0 8px;
+  }
+  .projects h1,
+  .my-skills h2,
+  .contact h1 {
+    font-size: 22px;
+    padding: 30px 0 15px 0;
+  }
+  .projects h2 {
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+  .projects p {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+  .project button {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+  .my-skills img {
+    height: 45px;
+    margin: 10px 5px;
+  }
+  .img-container {
+    gap: 5px;
+  }
+  .contact-info {
+    margin: 0 2px;
+  }
+  .available p {
+    font-size: 12px;
+    padding: 5px 5px;
+  }
+  .contact-info .form label,
+  .contact-info .form input,
+  .contact-info .form textarea {
+    font-size: 14px;
+    margin: 5px 5px;
+    padding: 10px 5px;
+  }
+  form button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px 5px;
+  }
+  .footer-social i {
+    font-size: 16px;
+    padding: 7px;
+    margin: 0 8px;
+  }
+}

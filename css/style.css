@@ -8,6 +8,7 @@ html{
     scroll-behavior:smooth;
 }
 
+
 @font-face {
     font-family: Vishalji;
     src: url(/fonts/Mona-Sans.ttf);
@@ -21,12 +22,54 @@ html{
 :root{
     --easing: cubic-bezier(0.86, 0, 0.07, 1);
     --gradient-brand: radial-gradient(at 60% 40%, rgba(0, 0, 0, 0.95) 0px, rgba(0, 0, 0, 0.85) 50%), radial-gradient(at 50% 80%, rgba(0, 0, 255, 0.5) 0px, transparent 50%), radial-gradient(at 70% 30%, rgba(0, 51, 102, 0.6) 0px, transparent 50%), radial-gradient(at 20% 60%, rgba(0, 0, 102, 0.5) 0px, transparent 50%), radial-gradient(at 80% 10%, rgba(0, 102, 204, 0.4) 0px, transparent 50%), radial-gradient(at 40% 50%, rgba(0, 153, 255, 0.4) 0px, transparent 50%), radial-gradient(at 60% 20%, rgba(0, 76, 153, 0.5) 0px, transparent 50%);
+    --background-light: #ffffff;
+    --background-dark: #161211;
+    --text-light: #000000;
+    --text-dark: #ffffff;
 
+}
+
+body.light-mode{
+    background-color: #ffffff; /* Light background */
+    color: #000000; /* Dark text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-image: url("https://vishal2376.github.io/assets/images/hero-bg-light.webp");
+    background-size:cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+body.light-mode .hero {
+    background-color: rgba(255, 255, 255, 0.8); /* Light hero section */
+}
+
+body.light-mode .nav-link {
+    color: #000000; /* Dark text for navigation links */
+}
+
+body.light-mode .footer {
+    background-color: #f0f0f0; /* Light footer background */
+    color: #000000; /* Dark footer text */
+}
+
+body.light-mode .footer-social i {
+    background-color: #000000; /* Dark icons */
+    color: #ffffff; /* Light icon text */
+}
+
+body.light-mode .hero button {
+    background-color: #000000; /* Dark buttons */
+    color: #ffffff; /* Light button text */
+}
+
+body.light-mode .hero button:hover {
+    background-color: #333333; /* Slightly lighter hover effect */
 }
 
 body {
     background-image: url("/images/hero-bg.webp");
     background-size:cover;
+    background-position: center;
     background-attachment: fixed;
     overflow-x: hidden;
     
@@ -150,14 +193,14 @@ body {
 /*Main info section */
 
 .hero{
-    background-color: rgba(0, 0, 0, 0.7);
     height: 120vh;
     margin-bottom: -110px;
+    background-image: linear-gradient(#0000008b, #000000e6);
 }
 
 .container1{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 15vh 0;
 }
 
@@ -169,8 +212,13 @@ body {
     font-family: Vishalji;
     font-weight: 700;
     color: white;
-    margin: 20px 0px
+    margin: 20px 0px;
+    font-stretch: 125%;
     
+}
+ 
+body.light-mode .info h1{
+    color: var(--text-light);
 }
 
 .info p{
@@ -242,6 +290,24 @@ body {
     border-top-right-radius: 20vh;
 }
 
+body.light-mode .projects {
+    background-color: var(--background-light);
+    border-top-left-radius: 20vh;
+    border-top-right-radius: 20vh;
+}
+
+body.light-mode .projects h1 {
+    color: var(--text-light);
+}
+body.light-mode .projects h2 {
+    color: var(--text-light);                                   
+}
+
+.body.light-mode.project button {
+    color: var(--text-light);
+    background-color: var(--background-light);
+}
+
  .container2 > div{
     height: 100vh;
 }
@@ -263,7 +329,8 @@ body {
 
 .projects img{
     border-radius: 20px;
-    z-index: 0;
+    z-index: 997;
+    position: relative;
 }
 
 .projects h2{

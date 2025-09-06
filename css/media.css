@@ -84,10 +84,20 @@
 
 /* Mobile devices */
 @media (max-width: 480px) {
+
+
+  #menu,#closemenu{
+    left: 65vw;
+    padding: 5px 20px;
+    top: vh;
+  }
+
+
   .hero {
-    height: 100vh;
-    margin-bottom: 0;
-    padding-bottom: 40px;
+    height: 60vh;
+    margin-bottom: -80px;
+    padding-bottom: 80px;
+
   }
   .container1 {
     padding: 8vh 0;
@@ -96,7 +106,8 @@
     margin: 0 10px;
   }
   .info h1 {
-    font-size: 22px;
+    font-size: clamp(24px, 7vw, 50px);
+    line-height: 1.5;
   }
   .info p {
     font-size: 14px;
@@ -104,18 +115,51 @@
   .work-sec button {
     font-size: 14px;
     padding: 10px 15px;
-    margin-bottom: 10px;
   }
   .social i {
     font-size: 16px;
     padding: 7px;
     margin: 0 8px;
   }
+
+  .projects{
+    border-top-left-radius: 10vh;
+    border-top-right-radius: 10vh;
+    overflow-x: hidden;
+  }
+
+  .container2 > div{
+    height: 70vh;
+}
+.project{
+  gap: 0;
+  margin: 10vh 2vw;
+}
+  .project-info h2,.prokect-info p{
+    text-align: center;
+  }
   .projects h1,
   .my-skills h2,
   .contact h1 {
     font-size: 22px;
     padding: 30px 0 15px 0;
+  }
+.project-image{
+  height: auto;
+  width: 100%;
+}
+
+  .project img{
+    width: 80vw;
+    height: auto;
+    margin: auto auto;
+    border-radius: 2vh;
+  }
+
+  
+
+  .my-skills{
+    max-height: fit-content;
   }
   .projects h2 {
     font-size: 16px;
@@ -130,11 +174,22 @@
     padding: 10px 10px;
   }
   .my-skills img {
-    height: 45px;
-    margin: 10px 5px;
+    height: 100px;
+    margin: 10px 10px;
+    width: auto;
+  }
+  .my-skills img:hover{
+    border-radius: 33%;
+    
+  }
+  .my-skills .img{
+    display: flex;
+    justify-content: center;
   }
   .img-container {
     gap: 5px;
+    justify-content: center;
+    display: flex;
   }
   .contact-info {
     margin: 0 2px;
@@ -160,4 +215,46 @@
     padding: 7px;
     margin: 0 8px;
   }
+
+  .indicator {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .indicator button{
+    padding: 10px 45px;
+  }
+
+  .indicator::after,.indicator ::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, transparent, transparent, transparent, transparent );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 100px;
+    z-index: -1;
+    padding: 3px 0px;
+    animation: 3s spin linear infinite;
+}
+
+.img-container{
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+}
+
+.form{
+    width: 100vw;
+    display: flex;
+    justify-content: center;  
+}
+
+.projects .contact{
+  height: 70vh;
+}
+
+
+
 }

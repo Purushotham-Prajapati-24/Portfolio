@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
-    
-
 </head>
 <body>
     <nav class="container" id="off-nav">
@@ -109,7 +107,7 @@
             <div class=" contact-info">
                 <div class="available">
                     <div class="indicator">
-                    <button><span ></span> Available For Hire</button>
+                    <button><span > Available For Hire</span></button>
                     </div>
                     <p>As an Web developer, I build cool, open-source Webpsites with a focus on user experience and performance, turning ideas into widely loved solutions<br><br><br>
 
@@ -150,73 +148,8 @@
             <button id="change-theme" class="theme-toggle"><div class="dark-light" id="dark-light"></div></button>
         </div>
     </div>
-
-    <script>
-        const toggleBtn = document.getElementById("menu");
-        const closeBtn = document.getElementById("closemenu");
-        const nav = document.getElementById("off-nav");
-        const overlay = document.getElementById("overlay");
-        const navLinks = document.querySelectorAll('.nav-link');
-        const lightDark = document.getElementById('dark-light');
-        const themeC = document.getElementById('change-theme'); 
-
-        toggleBtn.addEventListener("click", () => {
-            nav.classList.add("active");
-            overlay.classList.add("active");
-        });
-
-        closeBtn.addEventListener("click", closeNav);
-        overlay.addEventListener("click", closeNav);
-
-        // Add click handler for nav links
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                closeNav();
-            });
-        });
-
-        function closeNav() {
-            nav.classList.remove("active");
-            overlay.classList.remove("active");
-        }
-
-        const themeToggleBtn = document.getElementById("change-theme");
-
-        // Check for saved theme preference on page load
-        window.addEventListener("DOMContentLoaded", () => {
-            const savedTheme = localStorage.getItem("theme");
-            if (savedTheme === "light") {
-                document.body.classList.add("light-mode");
-                // themeToggleBtn.textContent = "Dark Mode"; // Update button text
-                themeC.style.backgroundColor = 'lightgrey';
-                lightDark.style.left='-50%';
-                lightDark.style.transition = ' all 0.3s ease';
-            }
-        });
-
-        // Add event listener to toggle theme
-        themeToggleBtn.addEventListener("click", () => {
-            document.body.classList.toggle("light-mode");
-
-            // Save the current theme to localStorage
-            if (document.body.classList.contains("light-mode")) {
-                localStorage.setItem("theme", "light");
-                themeC.style.backgroundColor = 'lightgrey';
-                lightDark.style.left='-50%';
-                lightDark.style.transition = ' all 0.3s ease';
-                
-
-                // themeToggleBtn.textContent = "Dark Mode"; // Update button text
-            } else {
-                localStorage.setItem("theme", "dark");
-                themeC.style.backgroundColor = '#D7AEFB';
-                lightDark.style.left='50%';
-                lightDark.style.transition = ' all 0.3s ease';
-
-                // themeToggleBtn.textContent = "Light Mode"; // Update button text
-            }
-        });
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
 </body>
 </html>

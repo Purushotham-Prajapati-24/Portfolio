@@ -146,6 +146,7 @@ body.light-mode .buttons .nav-link {
     z-index: 1000;
     transition: 450ms var(--easing);
     padding: 20px;
+    
 }
 
 #off-nav.active {
@@ -163,6 +164,7 @@ body.light-mode .buttons .nav-link {
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
+    
 }
 
 #overlay.active {
@@ -196,6 +198,7 @@ body.light-mode .buttons .nav-link {
     font-weight: 1000;
     cursor: pointer;
     padding: 8px 40px;
+    
 }
 
 .close button:hover{
@@ -333,8 +336,6 @@ body.light-mode .work:hover a{
 
 body.light-mode .projects {
     background-color: var(--background-light);
-    border-top-left-radius: 20vh;
-    border-top-right-radius: 20vh;
     box-shadow: 0 10px 30px black;
 }
 
@@ -368,11 +369,21 @@ body.light-mode .projects h2 {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+.project-image{
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    
+}
+
 
 .projects img{
-    border-radius: 20px;
     z-index: 997;
     position: relative;
+    transition: all 1s var(--easing);
+    object-fit: cover;
 }
 
 .projects h2{
@@ -394,7 +405,7 @@ body.light-mode .projects h2 {
 
 .project img:hover{
     transform: scale(1.05);
-    transition: all 1s var(--easing);
+    
 }
 
 .project button{
@@ -455,6 +466,8 @@ body.light-mode .projects a{
     margin: 50px 60px;
     transform: rotate(-20deg);   
     transition: transform 0.5s ease;
+    z-index: 996;
+    overflow: hidden;
 }
 
 body.light-mode .my-skills img{
@@ -465,7 +478,9 @@ body.light-mode .my-skills img{
 .my-skills img:hover{
     transform: rotate(-360deg);
     border: 2px solid lightblue;
-    border-radius: 33px;
+    border-radius: 33%;
+    overflow: hidden;
+    z-index: 996;
 }
 
 
@@ -697,13 +712,12 @@ body.light-mode .theme-toggle{
     background-color:white;
     /* box-shadow: 0 0 10px black; */
     position: relative;
-    left: 50%;
+    right: 50%;
 }
 
 
 .theme h1{
     color: white;
-    font-family: Vishalji;
     font-weight: 100;
     font-size: var(1rem,2vw,2rem);
     

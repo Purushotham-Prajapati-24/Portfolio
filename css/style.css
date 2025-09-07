@@ -7,6 +7,7 @@
 
 html{
     scroll-behavior:smooth;
+    box-sizing: border-box;
 }
 
 
@@ -223,9 +224,10 @@ body.light-mode .buttons .nav-link {
 /*Main info section */
 
 .hero{
-    height: 120vh;
+    height: 230vh;
     margin-bottom: -110px;
     background-image: linear-gradient(#0000008b, #000000e6);
+    width: 100%;
 }
 
 body.light-mode .hero{
@@ -233,9 +235,19 @@ body.light-mode .hero{
 }
 
 .container1{
-    display: grid;
-    grid-template-columns: 1fr;
     padding: 15vh 0;
+}
+
+.images{
+    width: 100vw;
+    height: 110vh;
+    overflow: hidden;
+}
+
+.images img{
+    object-fit: cover;
+    width: 100vw;
+    height: 110vh;
 }
 
 .info{

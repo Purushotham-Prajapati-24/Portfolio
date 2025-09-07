@@ -80,3 +80,14 @@ Shery.makeMagnet(".magnet", {
   strength: 2
 }); 
 };
+
+Shery.imageEffect('.images', {
+      style: 6,
+      gooey: true,
+      
+      setUniforms: (uniforms) => {
+        uniforms.infiniteGooey.value = true
+        uniforms.noEffectGooey.value = false
+      }
+    })
+ 

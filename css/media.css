@@ -85,6 +85,10 @@
 /* Mobile devices */
 @media (max-width: 480px) {
 
+  body{
+    overflow-x: hidden;
+  }
+
 
   #menu,#closemenu{
     left: 65vw;
@@ -94,13 +98,13 @@
 
 
   .hero {
-    height: 60vh;
+    height: 150vh;
     margin-bottom: -80px;
     padding-bottom: 80px;
 
   }
   .container1 {
-    padding: 8vh 0;
+    padding: 8vh 0 4vh 0;
   }
   .info {
     margin: 0 10px;
@@ -109,6 +113,18 @@
     font-size: clamp(24px, 7vw, 50px);
     line-height: 1.5;
   }
+
+  .images{
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.images img{
+    object-fit: cover;
+    width: 100vw;
+    height: 70vh;
+}
   .info p {
     font-size: 14px;
   }

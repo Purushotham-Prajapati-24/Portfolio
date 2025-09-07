@@ -62,3 +62,17 @@
                 // themeToggleBtn.textContent = "Light Mode"; // Update button text
             }
         });
+
+
+//Mouse follower
+Shery.mouseFollower({
+skew: true,
+ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+duration: 1,
+});   
+
+Shery.makeMagnet(".magnet", {
+  ease: "power3.out",
+  duration: 0.5,
+  strength: 2
+});

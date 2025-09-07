@@ -73,7 +73,8 @@ body {
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    cursor: rotate(30deg);
     cursor:url('../images/cursor.png'),auto;
     
 }

@@ -242,6 +242,7 @@ body.light-mode .hero{
     width: 100vw;
     height: 110vh;
     overflow: hidden;
+    position: relative;
 }
 
 .images img{

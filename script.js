@@ -81,13 +81,28 @@ Shery.makeMagnet(".magnet", {
 }); 
 };
 
+
 Shery.imageEffect('.images', {
       style: 6,
       gooey: true,
-      
       setUniforms: (uniforms) => {
         uniforms.infiniteGooey.value = true
         uniforms.noEffectGooey.value = false
-      }
-    })
- 
+        }
+});
+
+if(window.screen.width<500){
+   Shery.imageEffect('.images', {
+      style: 5,
+      gooey: true,
+      setUniforms: (uniforms) => {
+        uniforms.infiniteGooey.value = true
+        uniforms.noEffectGooey.value = false
+        uniforms.metaball.value = 0.3
+        }
+});
+}
+
+
+
+

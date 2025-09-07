@@ -713,7 +713,7 @@ body.light-mode .theme-toggle{
     background-color:white;
     /* box-shadow: 0 0 10px black; */
     position: relative;
-    right: 50%;
+    right: -50%;
 }
 
 
